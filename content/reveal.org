@@ -1,0 +1,39 @@
+#+OPTIONS: toc:nil num:nil reveal_width:1700
+#+REVEAL_TRANS: none
+
+# Configure revealjs relevant settings
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_VERSION: 4
+#+REVEAL_PLUGINS: (highlight notes zoom search)
+
+#+REVEAL_ADD_PLUGIN: chalkboard RevealChalkboard https://cdn.jsdelivr.net/npm/reveal.js-plugins@4.2.5/chalkboard/plugin.js
+#+REVEAL_ADD_PLUGIN: menu RevealMenu https://cdn.jsdelivr.net/npm/reveal.js-menu@2.1.0/menu.js
+
+# Custom controls
+#+REVEAL_ADD_PLUGIN: customcontrols RevealCustomControls https://cdn.jsdelivr.net/gh/rajgoel/reveal.js-plugins/customcontrols/plugin.js
+
+# Simple menu at the bottom
+#+REVEAL_ADD_PLUGIN: simplemenu Simplemenu https://cdn.jsdelivr.net/npm/reveal.js-simplemenu/plugin/simplemenu/simplemenu.min.js
+# #+REVEAL_ADD_PLUGIN: simpleMenu SimpleMenu plugin/simplemenu/simplemenu.js
+
+# #+REVEAL_HEAD_PREAMBLE: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+# External plugins
+# #+REVEAL_EXTERNAL_PLUGINS: (simplemenu "simplemenu.js")
+
+# Add CSS here
+#+REVEAL_HEAD_PREAMBLE: <link rel="stylesheet" href="../public/themes/css/styles.css" />
+#+REVEAL_HEAD_PREAMBLE: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.css"/>
+#+REVEAL_HEAD_PREAMBLE: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+#+REVEAL_HEAD_PREAMBLE: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+# Highlight js theme
+#+REVEAL_HEAD_PREAMBLE: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/base16/ros-pine-moon.min.css" />
+
+# Add JS here
+#+REVEAL_HEAD_PREAMBLE: <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+#+REVEAL_HEAD_PREAMBLE: <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+#+REVEAL_HEAD_PREAMBLE: <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js" charset="utf-8"></script>
+#+REVEAL_HEAD_PREAMBLE: <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+#+REVEAL_HEAD_PREAMBLE: <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js"></script>
+#+REVEAL_HEAD_PREAMBLE: <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>

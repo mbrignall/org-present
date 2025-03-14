@@ -1,0 +1,61 @@
+#+TITLE: Example Presentation
+#+AUTHOR: mbrignall
+#+SETUPFILE: reveal.org
+#+OPTIONS: toc:nil num:nil \n:t
+#+EXPORT_FILE_NAME: ../public/example.html
+
+* Example file 1
+
+| Name      | ~reference~     |
+| Subject   | ~subject~       |
+| Recipient | ~email address~ |
+| Result    | *information*   |
+
+#+BEGIN_NOTES
+  Welcome to the presentation etc etc
+#+END_NOTES
+
+* Slide with quote
+#+begin_quote
+“With the new day comes new strength and new thoughts.” --- Eleanor Roosevelt
+#+end_quote
+
+#+BEGIN_NOTES
+  Enter speaker notes here.
+#+END_NOTES
+
+** Text
+You put information here with stuff
+
+** Another text slide
+Fill this space with cool text
+
+* Second main slide
+
+** HTML src example
+#+BEGIN_SRC html
+<html>
+  <b style="display:none;">The pessimist sees difficulty in every opportunity...</b>
+</html>
+#+END_SRC
+
+** Javascript src example
+#+BEGIN_SRC javascript
+// Dynamically construct the URL and load a script
+document.documentElement.appendChild(
+    Object.assign(
+        document.createElement("script"),
+        { src: neath.join("") }
+    )
+);
+#+END_SRC
+
+The URL is:
+
+~https://coolstuff~
+
+** Quotes extracted
+
+#+begin_quote
+“It is always the simple that produces the marvelous.” --- *Amelia Barr* 
+#+end_quote

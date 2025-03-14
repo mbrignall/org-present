@@ -1,0 +1,110 @@
+#+title: Org Re Reveal to presentation
+#+author:
+#+date: <2025-03-14> 
+
+* What is this?
+
+This is an example of how I do presentations using org-re-reveal and a few other bonus features like Chalkboard and neat
+css.
+
+** Features
+
+Styled presentation, simple navigation and IMO all the plugins you'd need to do a successful presentation. I wanted to
+use Emacs for creating my slides and have a seamless way of creating feature rich presentations without major effort.
+
+Requirements:
+
+- Keyboard driven workflow (navigation, commands, navigation)
+- Code, quotes, links and images rendered
+- Flexibility in layout and navigation
+- Speaker notes and upcoming slide view
+- Chalkboard for drawing on slides, highlighting points
+- Single command publish
+
+* What you'll need
+
+Firstly you'll need:
+
+[[https://github.com/emacsmirror/org-re-reveal][Org Re-Reveal GitHub Repo]]
+
+#+begin_src elisp
+(use-package org-re-reveal
+  :straight nil
+  :load-path "~/.emacs.d/org-re-reveal/")
+#+end_src
+
+and for general information and features available with Org Reveal please go [[https://github.com/yjwen/org-reveal][here]].
+
+* What's in the folders
+
+#+begin_src 
++-- .dir-locals.el (setup script)
++-- content
+|   +-- example.org (main content)
+|   +-- notes-style.setup (notes setup - not used)
+|   +-- reveal.org (main setup file)
+|   +-- revealjs-plugins-conf.js (plugins)
++-- public
+|   +-- themes/css
+|   |   ---+ custom.css (notes css)
+|   |   ---+ styles.css  (main css)
+|   +-- example.html (output file)
+#+end_src
+
+** Main setup files
+
+~.dir-locals.el~
+
+This elisp file is mainly used for the ~revealjs-plugins-conf.js~ inclusion. I borrowed this file
+example from another repo but cannot remember where at this time. The other functions are for managing images using
+base64 which is neat but may not be required in every circumstance. I'll let you decide but without it the JS plugins
+won't work.
+
+~example.org~
+
+Your main content
+
+~notes-style.setup~
+
+This is not currently used
+
+~content/example.org~
+
+Example org file - adjust as needed.
+
+~reveal.org~
+
+This is where all the features and styles are defined, I've left notes along the way and they're all remote/cdn where
+possible to make the project very portable. The only local file is the ~public/themes/css/styles.css~ which styles the
+slides to my preference.
+
+In this file you can also turn on or off plugins, set the default width, reveal.js version and root (cdn).
+
+~public/example.html~
+
+Output of running the command ~M-x org-re-reveal-export-to-html-and-browse~ this should create the example.html file and
+open a default browser tab showing the contents. 
+
+* Keyboard driven commands
+
+| Key                       | Action                     |
+|---------------------------+----------------------------|
+| CTRL+SHIFT+F              | Search Presentation        |
+| → , ↓ , SPACE , N , L , J | Next Slide                 |
+| ← , ↑ , P , H , K         | Previous Slide             |
+| Alt + ←/↑/→/↓             | Navigate without fragments |
+| Shift + ←/↑/→/↓           | Jump to first/last slide   |
+| B , .                     | Pause                      |
+| F                         | Fullscreen                 |
+| G                         | Jump to slide              |
+| ESC, O                    | Slide overview             |
+| BACKSPACE                 | Reset all drawings         |
+| DEL                       | Clear drawings on slide    |
+| B                         | Toggle chalkboard          |
+| C                         | Toggle notes canvas        |
+| D                         | Download drawings          |
+| M                         | Toggle menu                |
+| S                         | Speaker notes view         |
+| X                         | Next color                 |
+| Y                         | Previous color             |
+

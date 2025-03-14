@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Roboto+Mono');
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+/* html, body { */
+/*     background-color: #1c1e26; */
+/*     font-size: 14px; */
+/*     line-height: 1.5; */
+/*     color: #dcdccc; */
+/*     font-family: 'Fira Mono', monospace; */
+/* } */
+
+div.palette, div.boardhandle {
+  position: absolute;
+/*
+  height: 260px;
+  margin: -130px 0 0 0px;
+*/  
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  border-radius: 10px;
+  border-top:    4px solid #222; 
+  border-right:  4px solid #222; 
+  border-bottom: 4px solid #222;
+  background: black;
+  transition: transform 0.3s;
+}
+
+div.palette  {
+  left: -10px;
+  padding-left:10px;
+}
+
+div.boardhandle {
+  right: -10px;
+  padding-right:10px;
+}
+
+div.palette > ul,
+div.boardhandle > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.palette > ul > li,
+div.boardhandle > ul > li {
+  margin: 10px;
+}
+
+@media print {
+	div.palette, div.boardhandle { 
+		display: none!important; 
+	}
+}
+
+/*********************************************
+ * REVEAL.JS BASE STYLES
+ *********************************************/
+.reveal {
+    font-family: "Fira Mono", sans-serif;
+    font-size: 40px;
+    color: #657b83;
+}
+
+/* custom.css */
+.reveal > .overlay {
+  backdrop-filter: unset!important;
+}
+
+::selection {
+    color: #fff;
+    background: #e79686;
+    text-shadow: none;
+}
+
+/*********************************************
+ * HEADINGS STYLING
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    margin: 0 0 20px 0;
+    color: #7ec98f;
+    font-family: "Roboto Mono", Impact, sans-serif;
+    font-weight: normal;
+    line-height: 1.2;
+    text-shadow: none;
+    text-align: center;
+}
+
+.reveal h1 {
+    font-size: 3.5em;
+    color: #e79686;
+}
+
+.reveal h2 {
+    font-size: 2em;
+    color: #7ec98f;
+}
+
+.reveal h3 {
+    font-size: 1.5em;
+    color: #a89bb9;
+}
+
+.reveal h4 {
+    font-size: 1.2em;
+    color: #6ca0dc;
+}
+
+/*********************************************
+ * TEXT AND PARAGRAPH STYLING
+ *********************************************/
+.reveal p {
+    line-height: 1.5;
+    text-align: left;
+}
+
+.reveal p.date {
+    line-height: 1.5;
+    text-align: center;
+}
+
+.reveal strong, .reveal b {
+    font-weight: bold;
+}
+
+.reveal em {
+    font-style: italic;
+}
+
+/*********************************************
+ * IMAGES AND MEDIA
+ *********************************************/
+.reveal img,
+.reveal video,
+.reveal iframe {
+    max-width: 95%;
+    max-height: 95%;
+    margin: 15px 0px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 4px solid #657b83;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    align: center;
+}
+
+.reveal section img.plain {
+    border: 0;
+    box-shadow: none;
+}
+
+.reveal a img {
+    transition: all .15s linear;
+}
+
+.reveal a:hover img {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #7ec98f;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * LIST STYLING
+ *********************************************/
+.reveal ol, .reveal ul {
+    display: block;
+    text-align: left;
+    margin-left: 1em;
+    padding-left: 20px;
+}
+
+.reveal ol {
+    list-style-type: decimal;
+}
+
+.reveal ul {
+    list-style-type: disc;
+}
+
+.reveal ul ul {
+    list-style-type: square;
+}
+
+.reveal ul ul ul {
+    list-style-type: circle;
+}
+
+/*********************************************
+ * BLOCKQUOTE STYLING
+ *********************************************/
+.reveal blockquote {
+    display: block;
+    position: relative;
+    width: 70%;
+    margin: 20px auto;
+    padding: 5px;
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/*********************************************
+ * CODE AND PREFORMATTED TEXT STYLING
+ *********************************************/
+.reveal pre {
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    font-size: 0.6em;
+    font-family: "Fira Mono", monospace;
+    background: #2e3440;
+    color: #dcdccc;
+    padding: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.reveal code {
+    font-family: "Roboto Mono", monospace;
+    background: #2e3440;
+    color: #dcdccc;
+    padding: 2px 4px;
+    border-radius: 4px;
+    text-align: left;
+    text-transform: none;
+}
+
+.reveal pre code {
+    display: block;
+    padding: 5px;
+    max-height: 500px;
+    word-wrap: normal;
+}
+
+/*********************************************
+ * LINKS STYLING
+ *********************************************/
+.reveal a {
+    color: #7ec98f;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.reveal a:hover {
+    color: #e79686;
+    text-decoration: underline;
+}
+
+/*********************************************
+ * TABLE STYLING
+ *********************************************/
+.reveal table {
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 0.85em;
+}
+
+.reveal table th, .reveal table td {
+    padding: 0.2em 0.5em;
+    border-bottom: 1px solid #7ec98f;
+}
+
+.reveal table th {
+    font-weight: bold;
+    color: #7ec98f;
+}
+
+.reveal table td {
+    text-align: left;
+    color: #dcdccc;
+}
+
+/*********************************************
+ * PROGRESS BAR AND CONTROLS
+ *********************************************/
+.reveal .controls, .reveal .progress {
+    color: #7ec98f;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.reveal .progress span {
+    transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+/*********************************************
+ * FOOTER AND POSTAMBLE
+ *********************************************/
+.reveal .postamble {
+    font-size: 1em;
+    margin-top: 20px;
+    color: #7ec98f;
+}
+
+/** Custom controls *
+ * From https://oer.gitlab.io/emacs-reveal-howto/reveal.js/plugin/customcontrols/style.css
+ *
+ **/
+#customcontrols {
+	z-index: 40;
+	position: fixed;
+	left: 60px;
+	bottom: 0px;
+	text-align: center;
+	font-size: 20px;
+}
+
+#customcontrols button {
+	background: none;
+	color: #7ec98f;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	z-index: 40;
+}
+
+#customcontrols svg {
+	padding-right: 0px;
+}
+
+#customcontrols button:hover {
+	color: #e79686;
+}
+
+#customcontrols > ul {
+	position: fixed;
+	left: 50px;
+	bottom: 32px;
+	list-style-type: none;
+	overflow: hidden;
+	margin: 0;
+	border: 1px solid var(--r-link-color);
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #e79686;
+}
+
+#customcontrols ul > li {
+	margin: 0px 5px;
+	/* padding: 0px 5px; */
+	float: left;
+}
+
+#customcontrols.collapsed  #collapse-customcontrols, #customcontrols.collapsed > ul  {
+	display: none;
+}
+
+#customcontrols:not(.collapsed) #expand-customcontrols {
+	display: none;
+}
+
+@media only screen and (min-width: 500px) {
+	#customcontrols > button {
+		display: none;
+	}
+	#customcontrols > ul {
+		padding-top: 0px;
+		padding-bottom: 0px;
+		bottom: 32px;
+		border: none;
+		background: none;
+	}
+}
+
+@media print {
+	#customcontrols {
+		display: none!important;
+	}
+}
