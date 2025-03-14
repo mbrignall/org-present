@@ -49,8 +49,8 @@ and for general information and features available with Org Reveal please go [[h
 |   +-- revealjs-plugins-conf.js (plugins)
 +-- public
 |   +-- themes/css
-|   |   --+ custom.css (notes css)
-|   |   --+ styles.css  (main css)
+|   |   +-- custom.css (notes css)
+|   |   +-- styles.css  (main css)
 |   +-- example.html (output file)
 #+end_src
 
