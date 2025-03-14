@@ -5,8 +5,8 @@
 * What is this?
 
 #+ATTR_HTML: :style margin:auto; display:block; width:200px
-[[./img/org-present.png
-]]
+[[./img/org-present.png]]
+
 This is an example of how I do presentations using org-re-reveal and a few other bonus features like Chalkboard and neat
 css.
 
