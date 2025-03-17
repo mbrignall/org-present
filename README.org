@@ -63,15 +63,15 @@ example from another repo but cannot remember where at this time. The other func
 base64 which is neat but may not be required in every circumstance. I'll let you decide but without it the JS plugins
 won't work.
 
-*** ~notes-style.setup~
-
-This is not currently used
-
 *** ~content/example.org~
 
 Example org file - adjust as needed.
 
-*** ~reveal.org~
+*** ~content/notes-style.setup~
+
+This is not currently used
+
+*** ~content/reveal.org~
 
 This is where all the features and styles are defined, I've left notes along the way and they're all remote/cdn where
 possible to make the project very portable. The only local file is the ~public/themes/css/styles.css~ which styles the
