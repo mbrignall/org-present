@@ -63,10 +63,6 @@ example from another repo but cannot remember where at this time. The other func
 base64 which is neat but may not be required in every circumstance. I'll let you decide but without it the JS plugins
 won't work.
 
-*** ~example.org~
-
-Your main content
-
 *** ~notes-style.setup~
 
 This is not currently used
